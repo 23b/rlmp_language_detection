@@ -441,7 +441,7 @@ class LanguageDetection extends AbstractPlugin {
 		);
 
 		while ($row = $this->getDB()->sql_fetch_assoc($res)) {
-			if (TYPO3_DLOG && !$row['isocode']) {
+			if (TYPO3_DLOG && !$row['lg_iso_2']) {
 				GeneralUtility::devLog('No ISO-code given for language with UID ' . $row['uid'], $this->extKey);
 			}
 			if(!empty($row['lg_country_iso_2'])) {
