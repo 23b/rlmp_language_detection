@@ -373,15 +373,33 @@ TypoScript Reference
          string
 
    Description
-         Path to the GeoIP database file, which must be stored locally. One free
-         GeoIP database file can be found on the `website of Maxmind`_. For more
+         Path to the GeoIP database file (GeoIP.dat), which must be stored locally. Path is relative to your Typo3 Installation Root. One free GeoIP database file can be found on the `website of Maxmind`_. For more
          details look to the :ref:`NetGeoIP`.
-
+         
+         
    Default
          (empty)
 
 
 .. _website of Maxmind: http://dev.maxmind.com/geoip/legacy/geolite/
 
+.. container:: table-row
+
+   Property
+         pearDirectory
+
+   Data type
+         string
+
+   Description
+         Path to the Pear codebase. You only need to define this if you want to use GeoIP Lookup via `Pear Net GeoIP`_ Library and in case PEAR_INSTALL_DIR is not globally defined allready.
+         This must be a absolute path within your server environment. Check $_SERVER['DOCUMENT_ROOT'] if you don't know
+         the absolute path to your Typo3 installation.
+         
+   Default
+         (empty)
+         
+.. _Pear Net GeoIP: https://pear.php.net/package/Net_GeoIP
+         
 .. ###### END~OF~TABLE ######
 
